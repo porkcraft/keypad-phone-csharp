@@ -1,0 +1,14 @@
+C:\Users\salai\developments\C#\keypad-phone\keypad-phone-csharp\bin\Debug\net8.0\keypad-phone-csharp.exe
+C:\Users\salai\developments\C#\keypad-phone\keypad-phone-csharp\bin\Debug\net8.0\keypad-phone-csharp.deps.json
+C:\Users\salai\developments\C#\keypad-phone\keypad-phone-csharp\bin\Debug\net8.0\keypad-phone-csharp.runtimeconfig.json
+C:\Users\salai\developments\C#\keypad-phone\keypad-phone-csharp\bin\Debug\net8.0\keypad-phone-csharp.dll
+C:\Users\salai\developments\C#\keypad-phone\keypad-phone-csharp\bin\Debug\net8.0\keypad-phone-csharp.pdb
+C:\Users\salai\developments\C#\keypad-phone\keypad-phone-csharp\obj\Debug\net8.0\keypad-phone-csharp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\salai\developments\C#\keypad-phone\keypad-phone-csharp\obj\Debug\net8.0\keypad-phone-csharp.AssemblyInfoInputs.cache
+C:\Users\salai\developments\C#\keypad-phone\keypad-phone-csharp\obj\Debug\net8.0\keypad-phone-csharp.AssemblyInfo.cs
+C:\Users\salai\developments\C#\keypad-phone\keypad-phone-csharp\obj\Debug\net8.0\keypad-phone-csharp.csproj.CoreCompileInputs.cache
+C:\Users\salai\developments\C#\keypad-phone\keypad-phone-csharp\obj\Debug\net8.0\keypad-phone-csharp.dll
+C:\Users\salai\developments\C#\keypad-phone\keypad-phone-csharp\obj\Debug\net8.0\refint\keypad-phone-csharp.dll
+C:\Users\salai\developments\C#\keypad-phone\keypad-phone-csharp\obj\Debug\net8.0\keypad-phone-csharp.pdb
+C:\Users\salai\developments\C#\keypad-phone\keypad-phone-csharp\obj\Debug\net8.0\keypad-phone-csharp.genruntimeconfig.cache
+C:\Users\salai\developments\C#\keypad-phone\keypad-phone-csharp\obj\Debug\net8.0\ref\keypad-phone-csharp.dll
