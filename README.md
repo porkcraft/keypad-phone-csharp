@@ -1,3 +1,4 @@
+![alt text](image.png)
 # Old keypad phone simulation in C#
 This project simulates typing on an old keypad phone where each number on the keypad represents multiple letters. The input is processed according to how many times a key is pressed to produce the corresponding letter, plus the additional funtionalities such as special characters, Spacebar, Backspace and Send buttons.
 
