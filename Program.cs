@@ -18,7 +18,6 @@
             { '9', "WXYZ" },
             { '0', " "}
         };
-
         // Loop over each character in the input string
         foreach (char c in input) {
 
@@ -65,7 +64,6 @@
         }
         return theOutput;
     }
-
     // Testing of the examples
     static void Main(string[] args) {
         Console.WriteLine(OldPhonePad("33#"));
@@ -74,5 +72,6 @@
         Console.WriteLine(OldPhonePad("8 88777444666*664#"));
 
         Console.WriteLine(OldPhonePad("44666902777330999666881*111111#")); // Space & Special Characters
+        // More tests can be placed from here.
     }
 }
