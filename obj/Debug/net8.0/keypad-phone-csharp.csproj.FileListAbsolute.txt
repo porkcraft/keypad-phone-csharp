@@ -12,3 +12,4 @@ C:\Users\salai\developments\C#\keypad-phone\keypad-phone-csharp\obj\Debug\net8.0
 C:\Users\salai\developments\C#\keypad-phone\keypad-phone-csharp\obj\Debug\net8.0\keypad-phone-csharp.pdb
 C:\Users\salai\developments\C#\keypad-phone\keypad-phone-csharp\obj\Debug\net8.0\keypad-phone-csharp.genruntimeconfig.cache
 C:\Users\salai\developments\C#\keypad-phone\keypad-phone-csharp\obj\Debug\net8.0\ref\keypad-phone-csharp.dll
+C:\Users\salai\developments\C#\keypad-phone\keypad-phone-csharp\obj\Debug\net8.0\keypad-phone-csharp.sourcelink.json
