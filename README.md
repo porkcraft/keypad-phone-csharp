@@ -1,5 +1,5 @@
 # Old keypad phone simulation in C#
-This project simulates typing on an old keypad phone where each number on the keypad represents multiple letters. The input is processed according to how many times a key is pressed to produce the corresponding letter. Additionally, the `*` key functions as a `Backspace`, `0` key functions as a `Spacebar` and `#` is used to act as `Ener` key at the end of the input.
+This project simulates typing on an old keypad phone where each number on the keypad represents multiple letters. The input is processed according to how many times a key is pressed to produce the corresponding letter, plus the additional funtionalities such as special characters, Spacebar, Backspace and Send buttons.
 
 # Features
 - Simulates pressing buttons on an old phone keypad.
@@ -11,18 +11,18 @@ This project simulates typing on an old keypad phone where each number on the ke
 
 # Key Mapping
 ```
-1 ▶ ! @ & ( ) ?
-2 ▶ A B C
-3 ▶ D E F
-4 ▶ G H I
-5 ▶ J K L
-6 ▶ M N O
-7 ▶ P Q R S
-8 ▶ T U V
-9 ▶ W X Y Z
-0 ▶ Space
-* ▶ Backspace
-# ▶ End of input
+1 ► ! @ & ( ) ?
+2 ► A B C
+3 ► D E F
+4 ► G H I
+5 ► J K L
+6 ► M N O
+7 ► P Q R S
+8 ► T U V
+9 ► W X Y Z
+0 ► Space
+* ► Backspace
+# ► End of input
 ```
 
 # How to run
@@ -42,8 +42,19 @@ Make sure you have .NET SDK installed. You can download it from [here](https://d
 	dotnet run
 	```
 
-### Example Usage
-Here are some example inputs and their expected outputs.
+### Testing
+Testing session starts from line number 70 of `Program.cs` and more tests can be done from there.
+```c#
+static void Main(string[] args) {
+  Console.WriteLine(OldPhonePad("33#"));
+  Console.WriteLine(OldPhonePad("227*#"));
+  Console.WriteLine(OldPhonePad("4433555 555666#"));
+  Console.WriteLine(OldPhonePad("8 88777444666*664#"));
+
+  Console.WriteLine(OldPhonePad("44666902777330999666881*111111#")); // Space & Special Characters
+  // Place the testing key presses here for more tests.
+}
+```
 
 ### Test Cases
 | Input                             | Expected Outputs |
@@ -55,4 +66,4 @@ Here are some example inputs and their expected outputs.
 | `44666902777330999666881*111111#` | HOW ARE YOU?     |
 
 # How the code works
-The program reads a sequence of numbers, spaces and symbols as input. It uses a dictionary to map each key (from 1 to 9 & 0) to it's corresponding letter. If a number is pressed multiple times consecutively, it cycles through the letters associated with that key. The `*` acts as a `Backspace`, `0` acts as a `Spacebar` and the `#` acts as an `Enter`.
+The program reads a sequence of numbers, spaces and symbols as input. It uses a dictionary to map each key (from 1 to 9 & 0) to it's corresponding letter. If a number is pressed multiple times consecutively, it cycles through the letters associated with that key. A blank space `' '` will act as a pause, in order to type 2 characters from the same button after each other. The `*` acts as a `Backspace`, `0` acts as a `Spacebar` and the `#` acts as an `Enter`.
