@@ -30,20 +30,20 @@ This project simulates typing on an old keypad phone where each number on the ke
 Make sure you have .NET SDK installed. You can download it from [here](https://dotnet.microsoft.com/download).
 
 ### Steps
-1. Clone the repository or copy the code from `Program.cs` into a directory.
-2. Open the directory in VS Code.
+1. Clone this repository or copy the code from `Program.cs`.
+2. Create & open a directory in VS Code.
 3. In the terminal, navigate to the directory and create a new console app:
 	```powershell
 	dotnet new console
 	```
-4. Replace the content of `Program.cs` with the code from this project.
+4. Replace the content of `Program.cs` with copied code from this project.
 5. Run the program by executing the following command in the terminal.
 	```powershell
 	dotnet run
 	```
 
 ### Testing
-Testing session starts from line number 70 of `Program.cs` and more tests can be done from there.
+More tests can be placed from line number 70 of `Program.cs` and onwards.
 ```c#
 static void Main(string[] args) {
   Console.WriteLine(OldPhonePad("33#"));
@@ -52,7 +52,7 @@ static void Main(string[] args) {
   Console.WriteLine(OldPhonePad("8 88777444666*664#"));
 
   Console.WriteLine(OldPhonePad("44666902777330999666881*111111#")); // Space & Special Characters
-  // Place the testing key presses here for more tests.
+  // More tests can be placed from here.
 }
 ```
 
