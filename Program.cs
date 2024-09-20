@@ -7,6 +7,7 @@
 
         // Mapping of the keypad
         Dictionary<char, string> keypad = new Dictionary<char, string>() {
+            { '1', "!@&()?"},
             { '2', "ABC" },
             { '3', "DEF" },
             { '4', "GHI" },
@@ -71,5 +72,7 @@
         Console.WriteLine(OldPhonePad("227*#"));
         Console.WriteLine(OldPhonePad("4433555 555666#"));
         Console.WriteLine(OldPhonePad("8 88777444666*664#"));
+
+        Console.WriteLine(OldPhonePad("44666902777330999666881*111111#")); // Space & Special Characters
     }
 }
