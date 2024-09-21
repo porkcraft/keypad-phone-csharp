@@ -70,7 +70,7 @@ static void Main(string[] args) {
 ```
 
 ### Test Cases
-| Input                             | Expected Outputs |
+| Inputs                            | Expected Outputs |
 | --------------------------------- | ---------------- |
 | `33#`                             | E                |
 | `227*#`                           | B                |
@@ -82,3 +82,29 @@ static void Main(string[] args) {
 The program reads a sequence of numbers, spaces and symbols as input. It uses a dictionary to map each key (from 1 to 9 & 0) to it's corresponding letter. If a number is pressed multiple times consecutively, it cycles through the letters associated with that key. A blank space `' '` will act as a pause, in order to type 2 characters from the same button after each other. The `*` acts as a `Backspace`, `0` acts as a `Spacebar` and the `#` acts as an `Enter`.
 
 ### Flowchart
+```mermaid
+graph TD
+    A[Start] --> B[Initialize variables: theOutput, lastPressed, pressCount, keypad]
+    B --> C[Loop through input string]
+    C --> D{Is c a number key (2-9)?}
+    D -- Yes --> E{Is lastPressed == c?}
+    D -- No --> G{Is c a space?}
+    
+    E -- Yes --> F[Increment pressCount]
+    E -- No --> I[Append mapped char to theOutput, update vars]
+    
+    F --> C
+    I --> C
+    
+    G -- Yes --> H[Append mapped char to theOutput, reset vars]
+    G -- No --> J{Is c a backspace (*)?}
+    
+    H --> C
+    J -- Yes --> K[Remove last char from theOutput, reset vars]
+    J -- No --> L{Is c a send button (#)?}
+    
+    K --> C
+    L -- Yes --> M[Append final char to theOutput and End]
+    L -- No --> C
+
+```
