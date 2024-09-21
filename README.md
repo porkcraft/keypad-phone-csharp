@@ -1,6 +1,18 @@
-![alt text](image.png)
 # Old keypad phone simulation in C#
+![alt text](image.png)
+
 This project simulates typing on an old keypad phone where each number on the keypad represents multiple letters. The input is processed according to how many times a key is pressed to produce the corresponding letter, plus the additional funtionalities such as special characters, Spacebar, Backspace and Send buttons.
+
+# Contents
+- [Features](#features)
+- [Key Mapping](#key-mapping)
+- [How to run](#how-to-run)
+  - [Prerequsites](#prerequisites)
+  - [Steps](#steps)
+  - [Testing](#testing)
+  - [Test Cases](#test-cases)
+- [How the code works](#how-the-code-works)
+  - [Flowchart]
 
 # Features
 - Simulates pressing buttons on an old phone keypad.
@@ -68,3 +80,5 @@ static void Main(string[] args) {
 
 # How the code works
 The program reads a sequence of numbers, spaces and symbols as input. It uses a dictionary to map each key (from 1 to 9 & 0) to it's corresponding letter. If a number is pressed multiple times consecutively, it cycles through the letters associated with that key. A blank space `' '` will act as a pause, in order to type 2 characters from the same button after each other. The `*` acts as a `Backspace`, `0` acts as a `Spacebar` and the `#` acts as an `Enter`.
+
+### Flowchart
