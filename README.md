@@ -86,7 +86,7 @@ The program reads a sequence of numbers, spaces and symbols as input. It uses a 
 graph TD
     A[Start] --> B[Initialize variables: theOutput, lastPressed, pressCount, keypad]
     B --> C[Loop through input string]
-    C --> D{Is c a number key (2-9)?}
+    C --> D{Is c a number key 2-9?}
     D -- Yes --> E{Is lastPressed == c?}
     D -- No --> G{Is c a space?}
     
@@ -97,11 +97,11 @@ graph TD
     I --> C
     
     G -- Yes --> H[Append mapped char to theOutput, reset vars]
-    G -- No --> J{Is c a backspace (*)?}
+    G -- No --> J{Is c a backspace '*'?}
     
     H --> C
     J -- Yes --> K[Remove last char from theOutput, reset vars]
-    J -- No --> L{Is c a send button (#)?}
+    J -- No --> L{Is c a send button '#'?}
     
     K --> C
     L -- Yes --> M[Append final char to theOutput and End]
