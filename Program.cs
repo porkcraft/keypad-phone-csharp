@@ -18,19 +18,24 @@
             { '9', "WXYZ" },
             { '0', " "}
         };
-        // Loop over each character in the input string
+        // Loop over each character in the input
         foreach (char c in input) {
-
+            // Handle the Send button
+            if (c == '#') {
+                if (lastPressed != '\0') {
+                    theOutput += getChar(keypad, lastPressed, pressCount);
+                }
+                break;
+            }
             // If the character is a number between 2 & 9
-            if (keypad.ContainsKey(c)) {
+            else if (keypad.ContainsKey(c)) {
                 if (lastPressed == c)
                 {
                     pressCount++;
                 }
                 else {
                     if (lastPressed != '\0') {
-                        string index = keypad[lastPressed];
-                        theOutput += index[(pressCount - 1) % index.Length];
+                        theOutput += getChar(keypad, lastPressed, pressCount);
                     }
                     lastPressed = c;
                     pressCount = 1;
@@ -39,19 +44,10 @@
             // Handle the pause between letters
             else if (c == ' ') {
                 if (lastPressed != '\0') {
-                    string index = keypad[lastPressed];
-                    theOutput += index[(pressCount - 1) % index.Length];
+                    theOutput += getChar(keypad, lastPressed, pressCount);
                     lastPressed = '\0';
                     pressCount = 0;
                 }
-            }
-            // Handle the Send button
-            else if (c == '#') {
-                if (lastPressed != '\0') {
-                    string index = keypad[lastPressed];
-                    theOutput += index[(pressCount - 1) % index.Length];
-                }
-                break;
             }
             // Handle the Backspace button
             else if (c == '*') {
@@ -63,6 +59,11 @@
             }
         }
         return theOutput;
+    }
+    // Get characters from keypad (refactored)
+    private static string getChar(Dictionary<char, string> keypad, char lastPressed, int pressCount) {
+        string index = keypad[lastPressed];
+        return index[(pressCount - 1) % index.Length].ToString();
     }
     // Testing of the examples
     static void Main(string[] args) {
