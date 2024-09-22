@@ -1,5 +1,5 @@
 # Old keypad phone simulation in C#
-![alt text](image.png)
+![alt text](pic-screenshot.png)
 
 This project simulates typing on an old keypad phone where each number on the keypad represents multiple letters. The input is processed according to how many times a key is pressed to produce the corresponding letter, plus the additional funtionalities such as special characters, Spacebar, Backspace and Send buttons.
 
@@ -12,12 +12,12 @@ This project simulates typing on an old keypad phone where each number on the ke
   - [Testing](#testing)
   - [Test Cases](#test-cases)
 - [How the code works](#how-the-code-works)
-  - [Flowchart]
+  - [Flowchart](#flowchart)
 
 # Features
 - Simulates pressing buttons on an old phone keypad.
 - The `*` key works as a `Backspace` to delete the last character.
-- The `#` key works as `Enter` to end the put and returns the final result.
+- The `#` key works as `Send` to end the put and returns the final result.
 - The `0` key works as a `Spacebar`.
 - The `1` key contains characters `!`, `@`, `&`, `(`, `)` and `?`.
 - Supports character input like the keypad phone texting where pressing the same key multiple times cycles through the corresponding letter.
@@ -79,32 +79,7 @@ static void Main(string[] args) {
 | `44666902777330999666881*111111#` | HOW ARE YOU?     |
 
 # How the code works
-The program reads a sequence of numbers, spaces and symbols as input. It uses a dictionary to map each key (from 1 to 9 & 0) to it's corresponding letter. If a number is pressed multiple times consecutively, it cycles through the letters associated with that key. A blank space `' '` will act as a pause, in order to type 2 characters from the same button after each other. The `*` acts as a `Backspace`, `0` acts as a `Spacebar` and the `#` acts as an `Enter`.
+The program reads a sequence of numbers, spaces and symbols as input. It uses a dictionary to map each key (from 0 to 9) to it's corresponding letter. If a number is pressed multiple times consecutively, it cycles through the letters associated with that key. A blank space `' '` will act as a pause, in order to type 2 characters from the same button after each other. The `*` acts as a `Backspace`, `0` acts as a `Spacebar` and the `#` acts as an `Enter`. Check the flowchart below.
 
 ### Flowchart
-```mermaid
-graph TD
-    A[Start] --> B[Initialize variables: theOutput, lastPressed, pressCount, keypad]
-    B --> C[Loop through input string]
-    C --> D{Is c a number key 2-9?}
-    D -- Yes --> E{Is lastPressed == c?}
-    D -- No --> G{Is c a space?}
-    
-    E -- Yes --> F[Increment pressCount]
-    E -- No --> I[Append mapped char to theOutput, update vars]
-    
-    F --> C
-    I --> C
-    
-    G -- Yes --> H[Append mapped char to theOutput, reset vars]
-    G -- No --> J{Is c a backspace '*'?}
-    
-    H --> C
-    J -- Yes --> K[Remove last char from theOutput, reset vars]
-    J -- No --> L{Is c a send button '#'?}
-    
-    K --> C
-    L -- Yes --> M[Append final char to theOutput and End]
-    L -- No --> C
-
-```
+![alt text](pic-flowchart.png)
