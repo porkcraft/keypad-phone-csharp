@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("keypad-phone-csharp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4b59455e6ca13ac26b7f278e1589a8e446e7a841")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5fa04bfd791d9800ff94e4c1e9a61a77828bf82a")]
 [assembly: System.Reflection.AssemblyProductAttribute("keypad-phone-csharp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("keypad-phone-csharp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
